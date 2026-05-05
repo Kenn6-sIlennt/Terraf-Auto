@@ -22,7 +22,7 @@ Automated provisioning of KVM virtual machines using Terraform + libvirt provide
 ## 🚀 Quick Start
 
 # 1. Clone repository
-git clone https://github.com/Kenn6-sIlennt/Terraform-automation.git
+git clone https://github.com/Kenn6-sIlennt/Terraf-Auto.git<br>
 cd Terraform-automation
 
 # 2. Make script executable
