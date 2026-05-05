@@ -1,0 +1,48 @@
+# ─────────────────────────────────────────
+# KVM VM Automation - terraform.tfvars.example
+# Copy to terraform.tfvars 
+# ─────────────────────────────────────────
+
+# VM create
+vm_count = 1
+
+# VM name
+vm_name_prefix = "web"
+
+# RAM usage per VM (min 1)
+ram_gb = 2
+
+# Storage usage per VM
+disk_size_gb = 20
+
+# ISO/Clone location
+os_source_type = "iso"
+
+# ─────────────────────────────────────────
+# If os_source_type = "iso"
+# ─────────────────────────────────────────
+# Path ISO/Image file
+iso_path = "file:///var/lib/libvirt/images/ubuntu-22.04-cloud.img"
+
+# ─────────────────────────────────────────
+# If os_source_type = "clone"
+# ─────────────────────────────────────────
+# Volume pool 'default' cloned
+# check: virsh vol-list default
+clone_base_volume = "ubuntu-base.qcow2"
+
+# ─────────────────────────────────────────
+# Network & Cloud-Init
+# ─────────────────────────────────────────
+# KVM network use
+network_name = "default"
+
+# Username default
+cloudinit_username = "admin"
+
+# User Password
+cloudinit_password = ""
+
+# SSH Public Key (Highly recommended)
+# e.g.,: ssh_public_key = "ssh-rsa AAAAB3NzaC1yc2E... user@host"
+ssh_public_key = ""
